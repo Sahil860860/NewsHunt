@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 export class Navbar extends Component {
   render() {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
               NewsHunt
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -26,14 +26,51 @@ export class Navbar extends Component {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
+                  <Link className="nav-link " aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/About">
+                {/* <li className="nav-item">
+                  <Link className="nav-link" to="/About">
                     About
-                  </a>
+                  </Link>
+                </li> */}
+                <li>
+                  <Link className="nav-link" to="/Business">
+                    Business
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link" to="/Entertainment">
+                    Entertainment
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link" to="/General">
+                    General
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link" to="/Health">
+                    Health
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link" to="/Science">
+                    Science
+                  </Link>
+                </li>
+
+                <li>
+                  {" "}
+                  <Link className="nav-link" to="/Sports">
+                    Sports
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link" to="/Technology">
+                    Technology
+                  </Link>
                 </li>
               </ul>
             </div>
